@@ -11,6 +11,8 @@ c = int(input( ))
 print("Digite os extremos do intervalo onde mora a raíz buscada:")
 (ai,bi)=(int(input()) ,int(input()))
 
+print("Digite o primeiro termo da sequência (chute inicial)")
+xi=int(input())
 
 def f(x):
     return     x**2 - c
@@ -22,16 +24,12 @@ def phi(x):
     return     x - f(x)/f1(x)
 
 K= 500
-eps=10**(-5)
-xi= (ai+bi)/2
 i=0
 
 
 while i in range(0,K):
     if phi(xi) == xi:
         break         
-    # elif abs(f(xi)) < eps:
-    #     break
     else:
         xi=phi(xi)
     i+=1
